@@ -33,6 +33,26 @@
           position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
           clip: rect(0,0,0,0); white-space: nowrap; border: 0;
         }
+
+        #generativeML .image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .tcc-avatar {
+          display: block;
+          width: clamp(200px, 60vw, 504px);
+          aspect-ratio: 1 / 1;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        @media (max-width: 380px) {
+        .tcc-avatar {
+          width: clamp(180px, 70vw, 504px);
+        }
+      }
     </style>
   </head>
   <body class="is-preload">
@@ -118,7 +138,8 @@
           <img
             src="images/mba.png"
             alt="Capa do TCC de MBA"
-            style="max-width: 610px; height: auto; display: block; margin: 0 auto;"/>
+            class="tcc-avatar"
+          />
         </div>
       </section>
 
